@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<title>Screen Manager</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+		[class~=nav-links]{text-decoration:none;}#logo{font-weight:600;}[class~=nav-links],#open-sidebar,#close-sidebar,#logo{color:#fff;}#close-sidebar,#open-sidebar,#logo{line-height:60px;}#logo{font-size:1.0625pc;}#open-sidebar,#close-sidebar,[class~=nav-links]{font-weight:500;}[class~=about-app] a{color:#1f1f1f;}nav{width:100%;}#close-sidebar,#open-sidebar{font-size:22.5pt;}#open-sidebar,#close-sidebar{float:left;}*{padding-left:0;}nav{height:.625in;}nav{position:fixed;}[class~=nav-links]{display:inline-flex;}[class~=nav-links]{align-items:center;}*,nav{padding-bottom:0;}[class~=nav-links]{justify-content:center;}#close-sidebar,#open-sidebar{margin-right:.3125pc;}#sidebar,nav,[class~=about-app] a{padding-left:10px;}[class~=about-app]{background-color:#fff;}nav{top:0;}[class~=about-app]{display:inline-block;}#close-sidebar{display:none;}#sidebar{height:100vh;}#sidebar{width:70%;}[class~=about-app]{border-radius:.25pc;}nav,#sidebar{background-color:#dc143c;}[class~=loader]{width:37.5pt;}#sidebar{border-top-width:.010416667in;}[class~=loader]{height:.520833333in;}[class~=loader]{border-left-width:.375pc;}[class~=about-app] a{padding-bottom:3pt;}#sidebar,[class~=loader]{border-top-style:solid;}*{padding-right:0;}nav{left:0;}[class~=loader]{border-bottom-width:.0625in;}nav ul li a i{font-size:20px;}nav,*{padding-top:0;}#sidebar{border-top-color:#cd224d;}*{margin-left:0;}#sidebar{border-image:none;}[class~=loader]{border-right-width:.375pc;}[class~=loader]{border-top-width:.375pc;}*{margin-bottom:0;}*{margin-right:0;}#sidebar{padding-bottom:7.5pt;}*{margin-top:0;}[class~=loader]{border-left-style:solid;}*{box-sizing:border-box;}#sidebar,nav,[class~=about-app] a{padding-right:7.5pt;}#sidebar{padding-top:7.5pt;}#sidebar{transition:.5s;}[class~=loader]{border-bottom-style:solid;}#sidebar,#container{position:fixed;}nav{box-shadow:rgba(0,0,0,.2) 0 1px 4px;}*{font-family:Poppins,sans-serif;}[class~=loader]{border-right-style:solid;}[class~=loader]{border-left-color:#e0e0e0;}#sidebar{top:45pt;}#sidebar{left:-100%;}[class~=loader]{border-bottom-color:#dc143c;}nav,#sidebar{z-index:9;}#container{top:0;}[class~=loader]{border-right-color:#e0e0e0;}#container{right:0;}[class~=loader]{border-top-color:#dc143c;}[class~=loader]{border-image:none;}[class~=loader]{border-radius:50%;}#container{width:100%;}#container{height:100vh;}#container{background-color:#fff;}#container{display:flex;}#container{align-items:center;}#container{justify-content:center;}*{user-select:none;}#container{z-index:5;}[class~=loader]{animation:spin 1s linear infinite;}*{list-style:none;}[class~=about-app] a{padding-top:3pt;}nav ul li{margin-bottom:.208333333in;}nav ul li a i{margin-right:.052083333in;}@keyframes spin{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}iframe{position:fixed;}iframe{top:0;}iframe{right:0;}iframe{width:100%;}iframe{height:100vh;}
+			#menu {
+		background-color: #fff;
+		width: 100%;
+		height: 70px;
+		position: fixed;
+		bottom: 0px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		box-shadow: rgba(0, 0, 0, 0.4) 0 1px 10px;
+		z-index: 99;
+	}
+
+	.icon i {
+		color: black;
+		font-size: 30px;
+	}
+	</style>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav>
+	<span id="logo">StudySync </span>
+</nav>
+
+<i style="display: none;" class='bx bx-menu' id="open-sidebar"></i>
+<i style="display: none;" class='bx bx-x' id="close-sidebar"></i>
+
+<div id="container">
+	<div class="loader"></div>
+</div>
+
+<iframe src="https://5000.cutmbol.com/admin_notice/" frameborder="0"></iframe>
+
+<section id="menu">
+	<div id="home_icon" class="icon"><a href="/android_asset/view-notes.html"> <i class='bx bxs-home'></i></a></i></div>
+	<div id="viewnotic_icon" class="icon"><a href="/android_asset/view-notice.html"><i
+			class='bx bx-notepad'></i></a></div>
+	<div id="add_icon" class="icon"><a href="/android_asset/home.html"><i class='bx bx-message-alt-add'></i></a></div>
+	<div id="add_icon" class="icon"><a href="/android_asset/acc.html"><i class='bx bx-user-circle'></i></a></div>
+</section>
+
+<script>
+		const _0xcb4702=_0x376e;(function(_0x2b6541,_0x4325fa){const _0x330a11=_0x376e,_0x58c6fe=_0x2b6541();while(!![]){try{const _0x2905bd=-parseInt(_0x330a11(0x149))/0x1+parseInt(_0x330a11(0x142))/0x2*(-parseInt(_0x330a11(0x147))/0x3)+parseInt(_0x330a11(0x14d))/0x4*(parseInt(_0x330a11(0x146))/0x5)+-parseInt(_0x330a11(0x13d))/0x6+parseInt(_0x330a11(0x14b))/0x7*(-parseInt(_0x330a11(0x141))/0x8)+-parseInt(_0x330a11(0x14f))/0x9+parseInt(_0x330a11(0x14a))/0xa*(parseInt(_0x330a11(0x13e))/0xb);if(_0x2905bd===_0x4325fa)break;else _0x58c6fe['push'](_0x58c6fe['shift']());}catch(_0x153f20){_0x58c6fe['push'](_0x58c6fe['shift']());}}}(_0x2375,0x83b0f));function _0x2375(){const _0x22003c=['8zRaWRM','1874308uVpuhy','addEventListener','close-sidebar','getElementById','2065KAktqE','3vBjfFf','style','316442ovDRGB','4060cJbxte','3880121vpqCzS','click','1468ihvvBg','open-sidebar','8829477jqbQdG','none','sidebar','display','4985028QrVDGP','108581aQRSgn','-100%','onload'];_0x2375=function(){return _0x22003c;};return _0x2375();}function _0x376e(_0x4a7ce8,_0x1955a6){const _0x237506=_0x2375();return _0x376e=function(_0x376ef1,_0x332859){_0x376ef1=_0x376ef1-0x13a;let _0x67bd78=_0x237506[_0x376ef1];return _0x67bd78;},_0x376e(_0x4a7ce8,_0x1955a6);}const sidebar=document['getElementById'](_0xcb4702(0x13b)),openSidebar=document[_0xcb4702(0x145)](_0xcb4702(0x14e)),closeSidebar=document['getElementById'](_0xcb4702(0x144));openSidebar[_0xcb4702(0x143)](_0xcb4702(0x14c),()=>{const _0x3f4fd3=_0xcb4702;sidebar[_0x3f4fd3(0x148)]['left']='0',openSidebar[_0x3f4fd3(0x148)][_0x3f4fd3(0x13c)]=_0x3f4fd3(0x13a),closeSidebar['style']['display']='block';}),closeSidebar[_0xcb4702(0x143)]('click',()=>{const _0x3005bd=_0xcb4702;sidebar[_0x3005bd(0x148)]['left']=_0x3005bd(0x13f),openSidebar[_0x3005bd(0x148)][_0x3005bd(0x13c)]='block',closeSidebar['style'][_0x3005bd(0x13c)]=_0x3005bd(0x13a);}),window[_0xcb4702(0x140)]=function(){const _0x42e8ea=_0xcb4702;document[_0x42e8ea(0x145)]('container')[_0x42e8ea(0x148)][_0x42e8ea(0x13c)]=_0x42e8ea(0x13a);};
+	</script>
+</body>
+
+</html>

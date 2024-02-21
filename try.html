@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Notification Pop-up</title>
+	<style>
+		/* Add your existing styles here */
+		#notification-popup {
+			display: none;
+			height: 2rem;
+			width: 10rem;
+			position: fixed;
+			bottom: 10px;
+			/* Adjust as needed */
+			left: 10px;
+			/* Adjust as needed */
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 4px;
+			border-radius: 5px;
+			text-align: center;
+			align-items: center;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		#notification-popup.show {
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<title>Notification Pop-up</title>
+	</head>
+
+	<body>
+		<!-- Your content goes here -->
+
+		<div id="notification-popup" class="hidden">
+			<p id="notification-text">Note has been deleted</p>
+		</div>
+
+		<button id="show-notification-btn">Show Notification</button>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				// Function to show the notification pop-up
+				function showNotification() {
+					var notificationPopup = document.getElementById('notification-popup');
+					notificationPopup.classList.add('show');
+
+					// Hide the notification after 2.5 seconds
+					setTimeout(function () {
+						notificationPopup.classList.remove('show');
+					}, 2500);
+				}
+
+				// Button click event listener
+				var showNotificationBtn = document.getElementById('show-notification-btn');
+				showNotificationBtn.addEventListener('click', function () {
+					// Call the function to show the notification
+					showNotification();
+				});
+			});
+
+		</script>
+	</body>
+
+	</html>

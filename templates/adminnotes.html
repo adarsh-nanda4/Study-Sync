@@ -1,0 +1,101 @@
+{% extends "nav-menu.html" %}
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static "CJS\notes\adminnotes.css" %}">
+<title>Notes</title>
+{% endblock head %}
+
+{% block content %}
+{% load static %}
+<body>
+	<div id="yesorno">
+		<div class="yesorno-box">
+			<span>Are you sure?</span>
+			<i class='bx bxs-trash'></i>
+			<div class="yesorno-option">
+				<a id="yes">Yes</a>
+				<a id="no">No</a>
+			</div>
+		</div>
+	</div>
+	{% if context %}
+	<div class="select-container">
+		<form id="filternotes" method='post' action={% url "filternotesadmin" %} enctype="multipart/form-data">
+			<div class="field-container">
+				<div class="select-container">
+					<select name="select-dept" id="dept">
+						<option>select</option>
+						<option value="BCA">BCA</option>
+						<option value="MCA">MCA</option>
+					</select>
+					<select name="select-sem" id="sem">
+						<option>select</option>
+						<option value="Sem 1">Sem 1</option>
+						<option value="Sem 2">Sem 2</option>
+						<option value="Sem 3">Sem 3</option>
+						<option value="Sem 4">Sem 4</option>
+						<option value="Sem 5">Sem 5</option>
+						<option value="Sem 6">Sem 6</option>
+					</select>
+					<button type="submit" id="filter-btn" onclick=filternotes>submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- Notes Area -->
+	<div class="notes-container">
+		{% for note in context %}
+		<div class="notes">
+			<span class="notes-head">{{note.title}}</span>
+			<span class="notes-date">{{note.date}}</span>
+			<p>{{note.content}}</p>
+			<div class="notes-btn-container">
+				{% if note.files %}
+				<a href="{{ note.files.url }}" download><i class='bx bxs-download'></i>Download Resource</a>
+				{% else %}
+				<b>No resource available </b>
+				{% endif %}
+				<form id="deletenoteForm_{{ note.id }}" method="post" action="{% url 'delete_note' note.id %}"
+					class="deletenoteForm">
+					{% csrf_token %}
+				</form>
+				<button type="submit" class="Delete" onclick=runForm({{ note.id }})><i
+						class='bx bxs-trash-alt'></i></button>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+	{% endif %}
+	<script>const deleteBtn = document.querySelectorAll(".Delete");
+		const yesorno = document.getElementById("yesorno");
+		// This function hides the pop up
+		function hidePopup() {
+			yesorno.style.display = "none";
+		}
+
+		// This function shows the pop up
+		function showPopup() {
+			yesorno.style.display = "flex";
+		}
+
+		// When we click on yes or no it will call hidePopup function
+		document.getElementById("yes").addEventListener("click", hidePopup);
+		document.getElementById("no").addEventListener("click", hidePopup);
+		// A Khatarnak Function --- LOL :-)
+		function runForm(noteId) {
+			showPopup();
+			console.log(noteId);
+
+			// Use a callback to handle the form submission after the "yes" button is clicked
+			function submitForm() {
+				document.getElementById("deletenoteForm_" + noteId).submit();
+			}
+
+			// Event listener for "yes" button in the pop-up
+			document.getElementById("yes").addEventListener("click", function () {
+				flag = true;
+				submitForm(); // Call the function to submit the form
+			});
+		}
+	</script>
+{% endblock content %}

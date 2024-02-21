@@ -1,0 +1,147 @@
+/* ---- Font Family ---- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ---- Universal Selectors ---- */
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	user-select: none;
+	list-style: none;
+}
+
+body{
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* ---- Navigation Bar ---- */
+
+nav{
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #dc143c;
+	padding: 0 10px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 4px;
+	z-index: 9;
+}
+
+#logo{
+	font-weight: 600;
+	color: #fff;
+	line-height: 60px;
+	font-size: 17px;
+}
+
+#open-sidebar,
+#close-sidebar{
+	color: #fff;
+	font-weight: 500;
+	font-size: 30px;
+	float: left;
+	line-height: 60px;
+	margin-right: 5px;
+}
+
+#close-sidebar{
+	display: none;
+}
+
+#sidebar{
+	height: 100vh;
+	width: 70%;
+	background-color: #dc143c;
+	padding: 10px;
+	transition: 0.5s;
+	position: fixed;
+	top: 60px;
+	left: -100%;
+	z-index: 9;
+}
+
+nav ul li{
+	margin-bottom: 20px;
+}
+
+.nav-links{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul li a i{
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+.about-app{
+	background-color: #fff;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+.about-app a{
+	color: #1f1f1f;
+	padding: 4px 10px;
+}
+
+/* ---- Notice Board ---- */
+
+.notice-board-container{
+	width: 100%;
+	margin-top: 70px;
+	padding: 10px;
+}
+
+.notice{
+	width: 100%;
+	background: linear-gradient(81deg, rgb(255, 209, 220) 18%, rgb(211, 245, 255) 94%);
+	margin-bottom: 16px;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px;
+}
+
+.notice div{
+	background: linear-gradient(81deg, rgba(205,34,77,1) 18%, rgba(0,195,255,1) 94%);
+	padding: 4px 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.notice-head{
+	display: block;
+	color: #1a1a1a;
+	font-weight: 500;
+	color: #fff;
+}
+
+.notice-date{
+	color: #c8c8c8;
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.notice-text{
+	padding: 4px 10px;
+	color: #242424;
+	font-size: 14px;
+}
+.delete-button {
+    text-decoration: none;
+    font-weight: 500;
+    color: #dc143c;
+    padding: 2px 6px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+}

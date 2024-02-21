@@ -1,0 +1,169 @@
+/* ---- Font Family ---- */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ---- Universal Selectors ---- */
+
+/* #ffb2c6 */
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	user-select: none;
+	list-style: none;
+	text-decoration: none;
+}
+
+body {
+	font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+/* ---- Navigation Bar ---- */
+
+nav {
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #dc143c;
+	padding: 0 10px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 4px;
+	z-index: 9;
+}
+
+#logo {
+	font-weight: 600;
+	color: #fff;
+	line-height: 60px;
+	font-size: 17px;
+}
+
+#open-sidebar,
+#close-sidebar {
+	color: #fff;
+	font-weight: 500;
+	font-size: 30px;
+	float: left;
+	line-height: 60px;
+	margin-right: 5px;
+}
+
+#close-sidebar {
+	display: none;
+}
+
+#sidebar {
+	height: 100vh;
+	width: 70%;
+	background-color: #dc143c;
+	border-top: 1px solid #cd224d;
+	padding: 10px;
+	transition: 0.5s;
+	position: fixed;
+	top: 60px;
+	left: -100%;
+	z-index: 9;
+}
+
+nav ul li {
+	margin-bottom: 20px;
+}
+
+.nav-links {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 500;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav ul li a i {
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+.about-app {
+	background-color: #fff;
+	display: inline-block;
+	border-radius: 4px;
+}
+
+.about-app a {
+	color: #1f1f1f;
+	padding: 4px 10px;
+}
+
+/* ---- Add Notice ---- */
+
+.add-container{
+	width: 100%;
+	margin-top: 70px;
+	padding: 10px 20px;
+}
+
+.field-container{
+	width: 100%;
+	display: flex;
+	align-items: start;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.field-container input{
+	width: 100%;
+	padding: 10px;
+	outline: none;
+	border-radius: 6px;
+	border: 2px solid #a1a1a1;
+}
+
+.field-container input:focus{
+	border: 2px solid #dc143c;
+}
+
+.field-container textarea{
+	width: 100%;
+	height: 240px;
+	resize: none;
+	padding: 6px 10px;
+	outline: none;
+	border-radius: 6px;
+	border: 2px solid #a1a1a1;
+	font-family: Poppins;
+	font-size: 14px;
+}
+
+.field-container textarea:focus{
+	border: 2px solid #dc143c;
+}
+
+#add-btn{
+	padding: 10px;
+	width: 100%;
+	border: none;
+	border-radius: 4px;
+	background-color: #dc143c;
+	color: #fff;
+	font-weight: 500;
+}
+
+#add-btn:focus{
+	background-color: #1f1f1f;
+}
+
+
+#done{
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	background-color: #00a400;
+	padding: 6px 10px;
+	font-weight: 500;
+	color: #fff;
+	border-radius: 6px;
+	display: none;
+  }

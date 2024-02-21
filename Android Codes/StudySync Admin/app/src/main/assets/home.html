@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        [class~=about-app] a{color:#1f1f1f;}.nav-links{text-decoration:none;}#logo{font-weight:600;}.nav-links,#logo,#open-sidebar,#close-sidebar{color:#fff;}.nav-links,#open-sidebar{font-weight:500;}.nav-links{display:inline-flex;}.nav-links{align-items:center;}*{padding-left:0;}body{font-family:Poppins,Arial,Helvetica,sans-serif;}.nav-links,[class~=contener]{justify-content:center;}#logo,#open-sidebar{line-height:45pt;}#logo{font-size:1.0625pc;}[class~=about-app] a{padding-left:.625pc;}*{padding-bottom:0;}[class~=about-app]{background-color:#fff;}[class~=about-app]{display:inline-block;}[class~=about-app]{border-radius:4px;}[class~=about-app] a{padding-bottom:3pt;}[class~=contener]{margin-top:200px;}*{padding-right:0;}[class~=contener],nav{width:100%;}[class~=contener]{height:100%;}[class~=contener]{display:flex;}nav ul li a i{font-size:.208333333in;}[class~=about-app] a{padding-right:.625pc;}*{padding-top:0;}[class~=contener]{flex-wrap:wrap;}*{margin-left:0;}[class~=btn]{width:10pc;}[class~=about-app] a{padding-top:3pt;}[class~=btn]{height:9.375pc;}*{margin-bottom:0;}*{margin-right:0;}*{margin-top:0;}*{box-sizing:border-box;}[class~=btn]{margin-left:.104166667in;}[class~=btn]{margin-bottom:.104166667in;}#open-sidebar,#close-sidebar{font-size:.3125in;}#close-sidebar,#open-sidebar{float:left;}[class~=btn]{margin-right:.104166667in;}[class~=btn]{margin-top:.104166667in;}*{user-select:none;}[class~=btn] a{color:crimson;}[class~=btn]{border-left-width:1.5pt;}nav{height:60px;}[class~=btn]{border-bottom-width:1.5pt;}[class~=btn]{border-right-width:1.5pt;}[class~=btn]{border-top-width:1.5pt;}[class~=btn]{border-left-style:solid;}[class~=btn]{border-bottom-style:solid;}[class~=btn]{border-right-style:solid;}#sidebar,[class~=btn]{border-top-style:solid;}#open-sidebar,#close-sidebar{margin-right:3.75pt;}[class~=btn]{border-left-color:#dc143c;}#close-sidebar{font-weight:500;}*{list-style:none;}*{text-decoration:none;}[class~=btn]{border-bottom-color:#dc143c;}#close-sidebar{line-height:3.75pc;}[class~=btn]{border-right-color:#dc143c;}[class~=btn]{border-top-color:#dc143c;}#close-sidebar{display:none;}[class~=btn]{border-image:none;}[class~=btn]{border-radius:.260416667in;}#sidebar{height:100vh;}[class~=btn] a,[class~=text],[class~=icon],[class~=btn]{display:flex;}[class~=btn],[class~=btn] a,[class~=text],[class~=icon]{align-items:center;}[class~=btn]{font-weight:600;}nav,#sidebar{position:fixed;}[class~=btn]{flex-direction:column;}nav{top:0;}nav{left:0;}#sidebar{width:70%;}[class~=icon],[class~=btn] a,[class~=text]{justify-content:center;}#sidebar,nav{background-color:#dc143c;}#sidebar{border-top-width:.75pt;}#sidebar{border-top-color:#cd224d;}[class~=icon]{height:80%;}[class~=icon]{color:#dc143c;}#sidebar{border-image:none;}[class~=icon]{font-size:30pt;}#sidebar,nav{padding-left:.625pc;}[class~=icon],[class~=text]{width:100%;}[class~=icon]{border-radius:.260416667in 1.5625pc 0pc 0pc;}nav{padding-bottom:0;}[class~=icon]{background:linear-gradient(81deg,#fff 18%,#fff 94%);}[class~=text]{height:30%;}#sidebar{padding-bottom:.625pc;}#sidebar,nav{padding-right:.625pc;}[class~=text]{color:#fff;}[class~=text]{background-color:#dc143c;}[class~=text]{border-radius:0pc 0in .208333333in .208333333in;}#sidebar{padding-top:.625pc;}#sidebar{transition:.5s;}nav{padding-top:0;}nav{box-shadow:rgba(0,0,0,.2) 0 1px .041666667in;}#sidebar{top:45pt;}#sidebar{left:-100%;}#sidebar,nav{z-index:9;}nav ul li a i{margin-right:3.75pt;}nav ul li{margin-bottom:1.25pc;}
+
+        .add-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.add-box {
+    margin-top: 90px;
+    width: 95%;
+    height: 350px;
+    background-color: rgb(238, 204, 204);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.add-text {
+    width: 100%;
+
+    font-weight: 400;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+.add-btn {
+    width: 95%;
+    height: 90px;
+    border-radius: 20px;
+    border: 1px solid black;
+    border-bottom: 4px solid #dc143c;
+    border-left: 4px solid #dc143c;
+    margin-top: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.add-btn-text {
+    width: 50%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btn-logo {
+    width: 25%;
+    height: 100%;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-btn-logo i {
+    color: black;
+}
+
+#menu {
+        background-color: #fff;
+
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        bottom: 0px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.4) 0 1px 10px;
+
+        }
+
+        .icon i {
+            color: black;
+            font-size: 30px;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+<nav>
+    <span id="logo">StudySync </span>
+</nav>
+
+<i style="display: none;" class='bx bx-menu' id="open-sidebar"></i>
+<i style="display: none;" class='bx bx-x' id="close-sidebar"></i>
+
+
+<!-- addbox contener -->
+<section class="add-container">
+    <div class="add-box">
+        <div class="add-text"><span>Add Notes & Notice</span></div>
+
+        <div class="add-btn" id="add-notes">
+            <div class="add-btn-text">Add Notes </div>
+            <div class="add-btn-logo"><a href="/android_asset/add-notes.html"><i class='bx bxs-plus-circle'></i></a>
+            </div>
+        </div>
+
+        <div class="add-btn" id="add-notice">
+            <div class="add-btn-text">Add Notice </div>
+            <div class="add-btn-logo"><a href="/android_asset/add-notice.html"><i class='bx bxs-plus-circle'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="menu">
+    <div id="home_icon" class="icon"><a href="/android_asset/view-notes.html"> <i class='bx bxs-home'></i></a></i></div>
+    <div id="viewnotic_icon" class="icon"><a href="/android_asset/view-notice.html"><i
+            class='bx bx-notepad'></i></a></div>
+    <div id="add_icon" class="icon"><a href="/android_asset/home.html"><i class='bx bx-message-alt-add'></i></a></div>
+    <div id="add_icon" class="icon"><a href="/android_asset/acc.html"><i class='bx bx-user-circle'></i></a></div>
+</section>
+
+<script>
+        function _0x90f2(){const _0x1bfba3=['none','28bLiBMJ','click','addEventListener','-100%','sidebar','9aSyqYy','style','display','getElementById','142235oNneci','570252cpxfqd','close-sidebar','14516700VZdwNs','block','176CyKExw','open-sidebar','2673081iGvSDv','10yxynSB','left','10862XSIPsj','297031FdpCgS','2086818YDEVYN'];_0x90f2=function(){return _0x1bfba3;};return _0x90f2();}const _0x14ec1f=_0x3289;function _0x3289(_0x3104e3,_0x38537b){const _0x90f26f=_0x90f2();return _0x3289=function(_0x32895b,_0xd7c553){_0x32895b=_0x32895b-0x16f;let _0x401d6b=_0x90f26f[_0x32895b];return _0x401d6b;},_0x3289(_0x3104e3,_0x38537b);}(function(_0x4f1202,_0x18736d){const _0xf33f08=_0x3289,_0x504a9d=_0x4f1202();while(!![]){try{const _0x50a7af=-parseInt(_0xf33f08(0x175))/0x1+parseInt(_0xf33f08(0x183))/0x2*(-parseInt(_0xf33f08(0x17e))/0x3)+-parseInt(_0xf33f08(0x179))/0x4*(parseInt(_0xf33f08(0x182))/0x5)+-parseInt(_0xf33f08(0x177))/0x6+parseInt(_0xf33f08(0x176))/0x7*(parseInt(_0xf33f08(0x170))/0x8)+parseInt(_0xf33f08(0x172))/0x9*(-parseInt(_0xf33f08(0x173))/0xa)+parseInt(_0xf33f08(0x185))/0xb;if(_0x50a7af===_0x18736d)break;else _0x504a9d['push'](_0x504a9d['shift']());}catch(_0x4fdd61){_0x504a9d['push'](_0x504a9d['shift']());}}}(_0x90f2,0x84945));const sidebar=document['getElementById'](_0x14ec1f(0x17d)),openSidebar=document[_0x14ec1f(0x181)](_0x14ec1f(0x171)),closeSidebar=document[_0x14ec1f(0x181)](_0x14ec1f(0x184));openSidebar['addEventListener'](_0x14ec1f(0x17a),()=>{const _0x50f171=_0x14ec1f;sidebar[_0x50f171(0x17f)]['left']='0',openSidebar[_0x50f171(0x17f)]['display']=_0x50f171(0x178),closeSidebar['style'][_0x50f171(0x180)]=_0x50f171(0x16f);}),closeSidebar[_0x14ec1f(0x17b)]('click',()=>{const _0x4264fa=_0x14ec1f;sidebar[_0x4264fa(0x17f)][_0x4264fa(0x174)]=_0x4264fa(0x17c),openSidebar[_0x4264fa(0x17f)][_0x4264fa(0x180)]=_0x4264fa(0x16f),closeSidebar['style'][_0x4264fa(0x180)]=_0x4264fa(0x178);});
+    </script>
+</body>
+
+</html>

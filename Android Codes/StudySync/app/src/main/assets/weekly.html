@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+		[class~=nav-links]{text-decoration:none;}#logo{font-weight:600;}#close-sidebar,#open-sidebar,[class~=nav-links],#logo{color:#fff;}[class~=nav-links],#open-sidebar{font-weight:500;}[class~=about-app] a{color:#1f1f1f;}[class~=nav-links]{display:inline-flex;}[class~=day-divide],[class~=nav-links]{align-items:center;}.subject,nav,[class~=about-app] a,.time-table-area{padding-left:.104166667in;}[class~=day-divide] span,[class~=about-app] a{padding-bottom:3pt;}body{background-color:aliceblue;}[class~=nav-links]{justify-content:center;}[class~=about-app]{background-color:#fff;}[class~=about-app]{display:inline-block;}[class~=about-app],[class~=day-divide] span,[class~=demo-subject],.subject{border-radius:3pt;}nav,.time-table-area,[class~=day-divide]{width:100%;}[class~=day-divide],.time-table-area{display:flex;}.time-table-area,[class~=about-app] a,.subject{padding-right:.104166667in;}#logo,#open-sidebar{line-height:3.75pc;}#logo{font-size:1.0625pc;}*{margin-left:0;}[class~=day-divide] span,[class~=about-app] a{padding-top:3pt;}*{margin-bottom:0;}[class~=day-divide] span{padding-left:.041666667in;}#close-sidebar,#open-sidebar{font-size:1.875pc;}.time-table-area{flex-wrap:wrap;}.time-table-area{justify-content:flex-start;}#open-sidebar,#close-sidebar{float:left;}.time-table-area{align-self:center;}nav ul li a i{font-size:1.25pc;}.time-table-area{gap:.208333333in;}.time-table-area{user-select:none;}.time-table-area{padding-bottom:.052083333in;}.time-table-area{padding-top:4.75pc;}[class~=demo-subject]{width:330px;}[class~=demo-subject]{height:67.5pt;}[class~=demo-subject]{background-color:#bbcbcb;}.subject{width:100%;}nav{height:3.75pc;}*{margin-right:0;}.subject{background:linear-gradient(81deg,rgba(205,34,77,1) 27%,#ff4281 90%);}nav{position:fixed;}#close-sidebar,#open-sidebar,nav ul li a i{margin-right:.052083333in;}.subject{padding-bottom:.625pc;}[class~=day-divide] span,[class~=subject-type],[class~=subject-status]{padding-right:.041666667in;}.subject{padding-top:.625pc;}.subject{border-left-width:6px;}nav{top:0;}.subject{border-left-style:solid;}.subject{border-left-color:#333;}*{margin-top:0;}.subject-name,[class~=subject-status],#close-sidebar,[class~=subject-type]{font-weight:500;}nav{left:0;}*{padding-left:0;}.subject{border-image:none;}[class~=status-done]{background-color:#5f6f6f;}[class~=status-running]{background-color:#069606;}#close-sidebar{line-height:3.75pc;}#sidebar,nav,[class~=day-divide] span,[class~=status-pending]{background-color:#dc143c;}[class~=subject-time],.subject-name{display:block;}[class~=subject-time]{color:#acacac;}#close-sidebar{display:none;}[class~=subject-time]{font-size:.125in;}#sidebar{height:100vh;}#sidebar{width:70%;}*,nav{padding-bottom:0;}nav ul li{margin-bottom:1.25pc;}[class~=day-divide] span,.subject-name{color:#fff;}[class~=subject-type],[class~=subject-status]{display:inline-block;}[class~=subject-status],[class~=subject-type]{margin-top:7.5pt;}[class~=subject-status]{margin-right:.25pc;}[class~=subject-status],[class~=subject-type]{background-color:#fff;}[class~=subject-status],[class~=day-divide] hr,[class~=subject-type]{color:#dc143c;}#sidebar{border-top-width:.010416667in;}[class~=subject-status],[class~=subject-type]{font-size:14px;}[class~=subject-type],[class~=subject-status]{padding-left:3pt;}[class~=subject-type],[class~=subject-status]{padding-bottom:1.5pt;}[class~=subject-status],[class~=subject-type]{padding-top:1.5pt;}#sidebar{border-top-style:solid;}[class~=subject-status],[class~=subject-type]{border-radius:.020833333in;}#sidebar{border-top-color:#cd224d;}[class~=sunday-subject],nav,#sidebar,.info-text{padding-right:.104166667in;}#sidebar{border-image:none;}.info-text,[class~=sunday-subject],#sidebar{padding-left:7.5pt;}[class~=sunday-subject],#sidebar{padding-bottom:7.5pt;}*{padding-right:0;}[class~=sunday-subject],#sidebar{padding-top:7.5pt;}[class~=sunday-subject]{width:3.4375in;}[class~=day-divide] span{font-weight:500;}#sidebar{transition:.5s;}*,nav{padding-top:0;}#sidebar{position:fixed;}[class~=sunday-subject]{background-color:#dc143c;}.info-text,[class~=sunday-subject]{border-radius:.25pc;}#sidebar{top:3.75pc;}*{box-sizing:border-box;}#sidebar{left:-100%;}nav,#sidebar{z-index:9;}[class~=day-divide] hr{width:100%;}[class~=sunday-subject]{border-left-width:4.5pt;}nav{box-shadow:rgba(0,0,0,.2) 0 .010416667in 4px;}[class~=sunday-subject]{border-left-style:solid;}*{font-family:Rubik,Arial,Helvetica,sans-serif;}[class~=sunday-subject]{border-left-color:#333;}[class~=sunday-subject]{border-image:none;}.info-text{background-color:#fff;}.info-text{padding-bottom:.25pc;}.info-text{padding-top:.25pc;}.info-text{box-shadow:rgba(0,0,0,.4) 0 .010416667in .25pc;}*{user-select:none;}.info-text{border-left-width:6px;}.info-text{border-left-style:solid;}.info-text{border-left-color:#dc143c;}.info-text{border-image:none;}*{list-style:none;}
+	</style>
+	<title>Weekly</title>
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav>
+		<div class="icon-container">
+			<i class='bx bx-menu' id="open-sidebar"></i>
+			<i class='bx bx-x' id="close-sidebar"></i>
+		</div>
+		<span id="logo">Time Table</span>
+		<ul id="sidebar">
+			<li><a class="nav-links" href="/android_asset/home.html"><i class='bx bxs-home'></i>Home</a></li>
+			<li><a class="nav-links" href="/android_asset/time-table.html"><i class='bx bx-table'></i>Time Table</a></li>
+			<li><a class="nav-links" href="/android_asset/notes.html"><i class='bx bxs-notepad'></i>Notes</a></li>
+			<li><a class="nav-links" href="/android_asset/notice.html"><i class='bx bxs-bell'></i>Notice Board</a></li>
+			<li><a class="nav-links" href="/android_asset/todo.html"><i class='bx bx-task'></i>TODO List</a></li>
+			<li class="about-app"><a class="nav-links" href="/android_asset/about.html"><i class='bx bxl-android'></i></i>About App</a></li>
+		</ul>
+	</nav>
+
+	<!-- Time Table Area -->
+	<section id="table" class="time-table-area">
+		<div class="day-divide"><span>Monday</span><hr></div>
+
+		<div class="subject" id="10301130">
+			<span class="subject-time">10:30 AM - 11:30 AM</span>
+			<span class="subject-name">Machine Learning using Python</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="11401350">
+			<span class="subject-time">11:40 AM - 01:50 PM</span>
+			<span class="subject-name">ML For Image analytics</span>
+			
+			<span class="subject-type">PR</szpan>
+		</div>
+		<div class="subject" id="14001500">
+			<span class="subject-time">02:00 PM - 03:00 PM</span>
+			<span class="subject-name">Lunch Break 😋</span>
+			
+			<span class="subject-type">Meal</span>
+		</div>
+		<div class="subject" id="15001700">
+			<span class="subject-time">03:00 PM - 05:00 PM</span>
+			<span class="subject-name">IoT Analytics</span>
+			
+			<span class="subject-type">Domain</span>
+		</div>
+
+		<div class="day-divide"><span>Tuesday</span><hr></div>
+
+		<div class="subject" id="10301130">
+			<span class="subject-time">10:30 AM - 11:30 AM</span>
+			<span class="subject-name">Machine Learning using Python</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="11401240">
+			<span class="subject-time">11:40 AM - 12:40 PM</span>
+			<span class="subject-name">ML For Image analytics</span>
+			
+			<span class="subject-type">PR</span>
+		</div>
+		<div class="subject" id="12501350">
+			<span class="subject-time">12:50 PM - 01:50 PM</span>
+			<span class="subject-name">Mathematics for Machine Learning</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="14001500">
+			<span class="subject-time">02:00 PM - 03:00 PM</span>
+			<span class="subject-name">Lunch Break 😋</span>
+			
+			<span class="subject-type">Meal</span>
+		</div>
+		<div class="subject" id="15001700">
+			<span class="subject-time">03:00 PM - 05:00 PM</span>
+			<span class="subject-name">IoT Analytics</span>
+			
+			<span class="subject-type">Domain</span>
+		</div>
+
+		<div class="day-divide"><span>Wednesday</span><hr></div>
+
+		<div class="subject" id="10301130">
+			<span class="subject-time">10:30 AM - 11:30 AM</span>
+			<span class="subject-name">Computer Communication and Networking</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="11401240">
+			<span class="subject-time">11:40 AM - 12:40 PM</span>
+			<span class="subject-name">ML For Image analytics</span>
+			
+			<span class="subject-type">TUT</span>
+		</div>
+		<div class="subject" id="12501350">
+			<span class="subject-time">12:50 PM - 01:50 PM</span>
+			<span class="subject-name">Mathematics for Machine Learning</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="14001500">
+			<span class="subject-time">02:00 PM - 03:00 PM</span>
+			<span class="subject-name">Lunch Break 😋</span>
+			
+			<span class="subject-type">Meal</span>
+		</div>
+		<div class="subject" id="15001600">
+			<span class="subject-time">03:00 PM - 04:00 PM</span>
+			<span class="subject-name">Introduction to Software Engineering</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="16001700">
+			<span class="subject-time">04:00 PM - 05:00 PM</span>
+			<span class="subject-name">ML for Predictive Analysis</span>
+			
+			<span class="subject-type">Domain</span>
+		</div>
+
+		<div class="day-divide"><span>Thursday</span><hr></div>
+
+		<div class="subject" id="10301130">
+			<span class="subject-time">10:30 AM - 11:30 AM</span>
+			<span class="subject-name">Computer Communication and Networking</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="11401240">
+			<span class="subject-time">11:40 AM - 12:40 PM</span>
+			<span class="subject-name">ML for Predictive Analysis</span>
+			
+			<span class="subject-type">Domain</span>
+		</div>
+		<div class="subject" id="12501350">
+			<span class="subject-time">12:50 PM - 01:50 PM</span>
+			<span class="subject-name">Mathematics for Machine Learning</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="14001500">
+			<span class="subject-time">02:00 PM - 03:00 PM</span>
+			<span class="subject-name">Lunch Break 😋</span>
+			
+			<span class="subject-type">Meal</span>
+		</div>
+		<div class="subject" id="15001600">
+			<span class="subject-time">03:00 PM - 04:00 PM</span>
+			<span class="subject-name">Introduction to Software Engineering</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="16001700">
+			<span class="subject-time">04:00 PM - 05:00 PM</span>
+			<span class="subject-name">Computer Communication and Networking</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+
+		<div class="day-divide"><span>Friday</span><hr></div>
+
+		<div class="subject" id="10301130">
+			<span class="subject-time">10:30 AM - 11:30 AM</span>
+			<span class="subject-name">Machine Learning using Python</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="11401350">
+			<span class="subject-time">11:40 AM - 01:50 PM</span>
+			<span class="subject-name">Mathematics for Machine Learning</span>
+			
+			<span class="subject-type">PR</span>
+		</div>
+		<div class="subject" id="14001500">
+			<span class="subject-time">02:00 PM - 03:00 PM</span>
+			<span class="subject-name">Lunch Break 😋</span>
+			
+			<span class="subject-type">Meal</span>
+		</div>
+		<div class="subject" id="15001600">
+			<span class="subject-time">03:00 PM - 04:00 PM</span>
+			<span class="subject-name">Introduction to Software Engineering</span>
+			
+			<span class="subject-type">TUT</span>
+		</div>
+		<div class="subject" id="16001700">
+			<span class="subject-time">04:00 PM - 05:00 PM</span>
+			<span class="subject-name">Computer Communication and Networking</span>
+			
+			<span class="subject-type">PR</span>
+		</div>
+
+		<div class="day-divide"><span>Saturday</span><hr></div>
+
+		<div class="subject" id="10301240">
+			<span class="subject-time">10:30 AM - 12:40 PM</span>
+			<span class="subject-name">Introduction to Software Engineering</span>
+			
+			<span class="subject-type">PR</span>
+		</div>
+		<div class="subject" id="11401350">
+			<span class="subject-time">12:50 PM - 01:50 PM</span>
+			<span class="subject-name">Mathematics for Machine Learning</span>
+			
+			<span class="subject-type">PP</span>
+		</div>
+		<div class="subject" id="14001500">
+			<span class="subject-time">02:00 PM - 03:00 PM</span>
+			<span class="subject-name">Lunch Break 😋</span>
+			
+			<span class="subject-type">Meal</span>
+		</div>
+		<div class="subject" id="15001600">
+			<span class="subject-time">03:00 PM - 04:00 PM</span>
+			<span class="subject-name">Library Study</span>
+			
+			<span class="subject-type">Self</span>
+		</div>
+		<div class="subject" id="16001700">
+			<span class="subject-time">04:00 PM - 05:00 PM</span>
+			<span class="subject-name">Computer Communication and Networking</span>
+			
+			<span class="subject-type">TUT</span>
+		</div>
+	</section>
+
+	<script>
+		const _0x19fbf5=_0x1dba;function _0x1dba(_0x2314a4,_0x4df200){const _0x301564=_0x3015();return _0x1dba=function(_0x1dba02,_0x5de14c){_0x1dba02=_0x1dba02-0x69;let _0x44e7fe=_0x301564[_0x1dba02];return _0x44e7fe;},_0x1dba(_0x2314a4,_0x4df200);}(function(_0x336563,_0x134f84){const _0xf2e236=_0x1dba,_0x2b7d68=_0x336563();while(!![]){try{const _0x100897=parseInt(_0xf2e236(0x74))/0x1+parseInt(_0xf2e236(0x7a))/0x2*(-parseInt(_0xf2e236(0x6a))/0x3)+parseInt(_0xf2e236(0x6e))/0x4*(-parseInt(_0xf2e236(0x6b))/0x5)+parseInt(_0xf2e236(0x6d))/0x6*(-parseInt(_0xf2e236(0x70))/0x7)+-parseInt(_0xf2e236(0x7c))/0x8+parseInt(_0xf2e236(0x72))/0x9*(-parseInt(_0xf2e236(0x7f))/0xa)+parseInt(_0xf2e236(0x73))/0xb*(parseInt(_0xf2e236(0x6c))/0xc);if(_0x100897===_0x134f84)break;else _0x2b7d68['push'](_0x2b7d68['shift']());}catch(_0x36bfc5){_0x2b7d68['push'](_0x2b7d68['shift']());}}}(_0x3015,0xc8685));const sidebar=document[_0x19fbf5(0x71)](_0x19fbf5(0x7e)),openSidebar=document['getElementById'](_0x19fbf5(0x77)),closeSidebar=document[_0x19fbf5(0x71)](_0x19fbf5(0x7d));openSidebar['addEventListener'](_0x19fbf5(0x7b),()=>{const _0x1921f2=_0x19fbf5;sidebar[_0x1921f2(0x69)]['left']='0',openSidebar['style'][_0x1921f2(0x6f)]='none',closeSidebar[_0x1921f2(0x69)][_0x1921f2(0x6f)]=_0x1921f2(0x76);}),closeSidebar['addEventListener'](_0x19fbf5(0x7b),()=>{const _0x27f270=_0x19fbf5;sidebar[_0x27f270(0x69)][_0x27f270(0x79)]=_0x27f270(0x78),openSidebar[_0x27f270(0x69)][_0x27f270(0x6f)]=_0x27f270(0x76),closeSidebar[_0x27f270(0x69)]['display']=_0x27f270(0x75);});function _0x3015(){const _0x3ad152=['480078GXuSwG','78991jJdedb','1106115Kgxbeh','none','block','open-sidebar','-100%','left','164938zBuxcf','click','7664304XAXqeo','close-sidebar','sidebar','230fTBSgv','style','36AbqZnX','44495RsMOin','7356GpmaSu','636LlKZqH','556kSiHIg','display','18207RETvXN','getElementById'];_0x3015=function(){return _0x3ad152;};return _0x3015();}
+	</script>
+</body>
+
+</html>

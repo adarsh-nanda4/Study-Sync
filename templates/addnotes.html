@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{% static "CJS\notes\addnotes.css" %}">
+	<title>Add Notes</title>
+</head>
+
+<body>
+	<span id="done">Note has been added!</span>
+
+	<div class="add-container">
+		<form id="add_note"  method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+		<div class="field-container">
+			<input name="title-field" type="text" id="title-field" placeholder="Title">
+			<div class="select-container">
+				<select name="select-dept" id="dept">
+					<option value="bca">BCA</option>
+					<option value="mca">MCA</option>
+				</select>
+				<select name="select-sem" id="sem">
+					<option value="Sem 1">Sem 1</option>
+					<option value="Sem 2">Sem 2</option>
+					<option value="Sem 3">Sem 3</option>
+					<option value="Sem 4">Sem 4</option>
+					<option value="Sem 5">Sem 5</option>
+					<option value="Sem 6">Sem 6</option>
+				</select>
+			</div>
+			<textarea name="content" id="field-content" placeholder="Description"></textarea>
+			<input type="file" name="files" id="field-resource">
+			<button id="add-btn" onclick=addDone() >Add</button>
+		</div>
+		</form>
+		
+	</div>
+	<script>
+		function addDone(){
+			document.getElementById("done").style.display = "inline";
+			setTimeout(function(){
+			  document.getElementById("done").style.display = "none";
+			}, 3000);
+		  }
+	</script>
+</body>
+</html>

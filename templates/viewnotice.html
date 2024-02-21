@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{% static "CJS\notice\viewnotice.css" %}">
+	<title>Notice Board</title>
+</head>
+
+<body>
+	<!-- Notice Board Area -->
+	
+	<div class="notice-board-container">
+		{% if context %}
+		{% for notice in context %}
+		<div class="notice">
+			<div>
+				<span class="notice-head">{{notice.title}}</span>
+				<span class="notice-date">{{notice.date}}</span>
+			</div>
+			<p class="notice-text">{{notice.content}}</p>
+		</div>
+		{% endfor %}
+		{% endif %}
+	</div>
+	</html>

@@ -1,0 +1,36 @@
+{% extends "nav-menu.html" %}
+{% block head %}
+{% load static %}
+<title>add</title>
+<link rel="stylesheet" href={% static "CJS\add\add.css" %}>
+{% endblock head %}
+
+{% block content %}
+{% load static %}
+    <nav> <span id="logo">StudySync </span> </nav>
+
+<!-- addbox contener -->
+<section class="add-container" >
+<div class="add-box">
+<div class="add-text"><span>Add Notes & Notice</span></div>
+
+<div class="add-btn" id="add-notes"> 
+    <div class="add-btn-text">Add Notes </div>
+    <div class="add-btn-logo"><a href={% url "Add Notes" %}><i class='bx bxs-plus-circle' ></i></a></div>
+</div>
+
+<div class="add-btn" id="add-notice"> 
+    <div class="add-btn-text">Add Notice </div>
+    <div class="add-btn-logo"><a href={% url "Add Notice" %}><i class='bx bxs-plus-circle' ></i></a></div>
+</div>
+
+</div>
+</section>
+
+<section id="menu">
+    <div id="home_icon" class="icon"><a href="/home/home.html"> <i class='bx bxs-home'></i></a></i></div>
+    <div id="viewnotic_icon" class="icon"><a href="/view-notice-bord/view-notice.html"><i class='bx bx-notepad' ></i></a></div>
+    <div id="add_icon" class="icon"><a href=""><i class='bx bx-message-alt-add'  ></i></a></div>
+    <div id="add_icon" class="icon"><a href=""><i class='bx bx-user-circle'  ></i></a></div>
+        </section>
+{% endblock content %}

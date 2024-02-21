@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{% static "CJS\notice\adminnotice.css" %}">
+	<title>Notice Board</title>
+</head>
+
+<body>
+	<div id="yesorno">
+		<div class="yesorno-box">
+			<span>Are you sure?</span>
+			<i class='bx bxs-trash'></i>
+			<div class="yesorno-option">
+				<a id="yes">Yes</a>
+				<a id="no">No</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Notice Board Area -->
+
+	<div class="notice-board-container">
+		{% if context %}
+		{% for notice in context %}
+		<div class="notice">
+			<div>
+				<span class="notice-head">{{notice.title}}</span>
+				<span class="notice-date">{{notice.date}}</span>
+				<form id="deletenoticeForm_{{notice.id}}" method="post" action="{% url 'delete_notice' notice.id %}" >
+					{% csrf_token %}
+				</form> 
+				<button class="Delete" onclick=runForm({{notice.id}})><i class='bx bxs-trash-alt'type="button" ></i></button>
+			</div>
+			<p class="notice-text">{{notice.content}}</p>
+		</div>
+		{% endfor %}
+		{% endif %}
+	</div>
+		<script>
+			const deleteBtn = document.querySelectorAll(".Delete");
+			const yesorno = document.getElementById("yesorno");
+	
+			// This function hides the pop up
+			function hidePopup() {
+				yesorno.style.display = "none";
+			}
+	
+			// This function shows the pop up
+			function showPopup() {
+				yesorno.style.display = "flex";
+			}
+	
+			// When we click on yes or no it will call hidePopup function
+			document.getElementById("yes").addEventListener("click", hidePopup);
+			document.getElementById("no").addEventListener("click", hidePopup);
+			// A Khatarnak Function --- LOL :-)
+			function runForm(noteId) {
+				showPopup();
+				console.log(noteId);
+	
+				// Use a callback to handle the form submission after the "yes" button is clicked
+				function submitForm() {
+					document.getElementById("deletenoticeForm_" + noteId).submit();
+				}
+	
+				// Event listener for "yes" button in the pop-up
+				document.getElementById("yes").addEventListener("click", function () {
+					submitForm(); // Call the function to submit the form
+				});
+			}
+	
+	</script>
+</body>
+
+</html>

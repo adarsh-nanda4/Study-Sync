@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern UI Buttons</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #3498db, #2c3e50);
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            color: #333;
+        }
+
+        .button:hover {
+            background-color: #2c3e50;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        /* Customize styles for the main button */
+        .main-button {
+            background-color: #e74c3c;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            .button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="button main-button"><a href="admin/">Admin</a></button>
+    <div class="button-container">
+        <button class="button"><a href="viewnotes/">       Notes       </a></button>
+        <button class="button"><a href="viewnotice/">      Notice      </a></button>
+        <button class="button"><a href="admin_notes/"> Admin Notes </a></button>
+        <button class="button"><a href="admin_notice/">Admin Notice</a></button>
+        <button class="button"><a href="add_notes/">   Add Notes   </a></button>
+        <button class="button"><a href="add_notice/">  Add Notice  </a></button>
+    </div>
+</body>
+
+
+</html>
